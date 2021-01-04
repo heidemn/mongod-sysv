@@ -20,6 +20,15 @@ sudo chmod +x /etc/init.d/mongod
 
 ## Usage
 
+The script provides the usual service commands:
+
+- `sudo service mongod status`
+- `sudo service mongod start`
+- `sudo service mongod stop`
+- `sudo service mongod restart`
+
+Example:
+
 ```
 $ sudo service mongod status
 Checking status of mongod...
