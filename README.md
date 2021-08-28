@@ -1,13 +1,15 @@
 # mongod-sysv
 
-SysV init script for MongoDB.
+SysV init script and full installation script for MongoDB.
 
 Useful when Systemd is not available, e.g. in WSL2.  
 Allows to conveniently start and stop MongoDB in the background, using the default config file `/etc/mongod.conf`. 
 
 ## Prerequisites
 
-Only tested with MongoDB 4.0 on Ubuntu 20.04, running in WSL2.
+Only tested with MongoDB 4.0.26 and 5.0.2 on Ubuntu 20.04, running in WSL2.
+
+It should work without WSL2, but most likely you won't need it then.
 
 ## Installation
 
@@ -23,10 +25,16 @@ sudo chmod +x /etc/init.d/mongod
 Based on: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 Before running it, adapt [the script](install-mongodb.sh) as needed (e.g. MongoDB version).  
-Tested on Ubuntu 20.04 in WSL2.
 
 ```
-./install-mongodb.sh
+# Don't purge anything; install MongoDB 5.0.2:
+./install-mongodb.sh --yes
+
+# Purge previous packages and data, then install MongoDB 5.0.2:
+./install-mongodb.sh --yes --purge --purge-data
+
+# Purge previous packages and data, then install MongoDB 4.0.26:
+./install-mongodb.sh --yes --purge --purge-data 4.0
 ```
 
 
