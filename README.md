@@ -20,7 +20,9 @@ sudo chmod +x /etc/init.d/mongod
 
 ### Full installation of MongoDB
 
-Before running it, adapt the script as needed (e.g. MongoDB version).  
+Based on: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+Before running it, adapt [the script](install-mongodb.sh) as needed (e.g. MongoDB version).  
 Tested on Ubuntu 20.04 in WSL2.
 
 ```
