@@ -18,6 +18,16 @@ sudo curl -o /etc/init.d/mongod https://raw.githubusercontent.com/heidemn/mongod
 sudo chmod +x /etc/init.d/mongod
 ```
 
+### Full installation of MongoDB
+
+Before running it, adapt the script as needed (e.g. MongoDB version).  
+Tested on Ubuntu 20.04 in WSL2.
+
+```
+./install-mongodb.sh
+```
+
+
 ## Usage
 
 The script provides the usual service commands:
